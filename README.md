@@ -1,2 +1,2 @@
-# Techdegree Project 1 Random Quote Generator
+# techdegree-project-1-random-quote-generator
  First techdegree project
