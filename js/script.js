@@ -93,10 +93,9 @@ const printQuote = () => {
 
 
 // change background color function
-let colors = [ '#961212', '#407294', '#065535', '#420420', '#133337', 
+const colors = [ '#961212', '#407294', '#065535', '#420420', '#133337', 
     '#b85454', '#003366',  '#333333', '#853179'
 ];
-let viewedColors = [];
 
 const changeBackgroundColor = () => {
   // get random index
@@ -110,9 +109,6 @@ const autoQuoteChange = () => {
   setInterval(printQuote, 10 * 1000);
 }
 
-/***
- * click event listener for the print quote button
- * DO NOT CHANGE THE CODE BELOW!!
-***/
+// quote button click event listener
 document.getElementById('load-quote').addEventListener("click", printQuote, false);
 autoQuoteChange();
