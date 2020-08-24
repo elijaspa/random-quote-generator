@@ -50,11 +50,11 @@ const getRandomQuote = quoteArray => {
   // store random quote object
   const quote = quoteArray[randomArrayIndex];
 
-  // remove the quote from array
+  // store viewed quote and remove it to avoid seeing same one before all have been viewed
   viewedQuotes.push(quote);
   quoteArray.splice(randomArrayIndex, 1);
 
-  // check if quote array empty, repopulate it
+  // check if quote array empty, if so repopulate it with ones that were viewed again
   if(quoteArray.length === 0) {
     quotes = [...viewedQuotes];
     viewedQuotes = [];
@@ -98,13 +98,13 @@ const colors = [ '#961212', '#407294', '#065535', '#420420', '#133337',
 ];
 
 const changeBackgroundColor = () => {
-  // get random index
+  // get random index for colors array
   randomIndex = Math.floor(Math.random() * Math.floor(colors.length));
   // change background color 
   document.body.style.background = colors[randomIndex];
 }
 
-// automatic quote changing with 10s time interval
+// function for automatic quote changing with 10s time interval
 const autoQuoteChange = () => {
   setInterval(printQuote, 10 * 1000);
 }
