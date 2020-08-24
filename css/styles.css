@@ -115,12 +115,6 @@ h1 {
   font-style: normal;
 }
 
-.quote-context {
-  padding: 20px;
-  margin-top: 60px;
-  font-size: 1.5rem;
-  line-height: 2rem;
-}
 @media (min-width: 768px) {
   body {
     padding: 25px;
