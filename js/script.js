@@ -72,18 +72,18 @@ const printQuote = () => {
           <p class="source">${quote.source}`;
 
   // citation check 
-  if(quote.citation !== undefined) {
+  if(quote.citation) {
     html += `<span class="citation">${quote.citation}</span>`;
   }
 
   // year check 
-  if(quote.year !== undefined) {
+  if(quote.year) {
     html += `<span class="year">${quote.year}</span>`
   }
   html += `</p>`;   // add the closing p tag
 
   // context check 
-  if(quote.context !== undefined) {
+  if(quote.context) {
     html += `<p class="quote-context">${quote.context}</p>`
   };
 
@@ -99,7 +99,7 @@ const colors = [ '#961212', '#407294', '#065535', '#420420', '#133337',
 
 const changeBackgroundColor = () => {
   // get random index for colors array
-  randomIndex = Math.floor(Math.random() * Math.floor(colors.length));
+  randomIndex = getRandomIndex(colors.length);
   // change background color 
   document.body.style.background = colors[randomIndex];
 }
